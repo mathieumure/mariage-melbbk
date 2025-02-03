@@ -1,0 +1,53 @@
+.top {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.bottom {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.flowerTopLeft {
+  max-width: 70px;
+}
+
+.heart {
+  max-width: 65px;
+  margin-top: 10px;
+}
+
+.flowerTopMiddle {
+  max-width: 100px;
+}
+
+.flowerTopMiddleRight {
+  max-width: 50px;
+  margin-top: 15px;
+}
+
+.flowerTopRight {
+  max-width: 100px;
+}
+
+.flowerBottomLeft {
+  max-width: 100px;
+}
+.flowerBottomMiddleLeft {
+  max-width: 60px;
+}
+.flowerBottomMiddle {
+  max-width: 80px;
+}
+.flowerBottomMiddleRight {
+  max-width: 60px;
+}
+.flowerBottomRight {
+  max-width: 100px;
+}

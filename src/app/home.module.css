@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 15px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--blue);
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.logo {
+  width: 65%;
+  max-width: 400px;
+  margin-bottom: 5rem;
+}

@@ -1,8 +1,38 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 
-export const metadata: Metadata = {
-};
+import './globals.css';
+import styles from './layout.module.css';
+import {
+  FlowerBottomLeft,
+  FlowerBottomMiddle,
+  FlowerBottomMiddleLeft,
+  FlowerBottomMiddleRight,
+  FlowerBottomRight,
+  FlowerTopLeft,
+  FlowerTopMiddle,
+  FlowerTopMiddleRight,
+  FlowerTopRight,
+} from '@/modules/icons/Flowers';
+import { Heart } from '@/modules/icons/Heart';
+
+const nuevaStd = localFont({
+  display: 'swap',
+  src: [
+    {
+      path: '../font/NuevaStd-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../font/NuevaStd-BoldCond.otf',
+      weight: '800',
+      style: 'bold',
+    },
+  ],
+});
+
+export const metadata: Metadata = {};
 
 export default function RootLayout({
   children,
@@ -10,9 +40,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={nuevaStd.className}>
       <body>
-        {children}
+        <div className={styles.top}>
+          <FlowerTopLeft className={styles.flowerTopLeft} />
+          <Heart className={styles.heart} />
+          <FlowerTopMiddle className={styles.flowerTopMiddle} />
+          <FlowerTopMiddleRight className={styles.flowerTopMiddleRight} />
+          <FlowerTopRight className={styles.flowerTopRight} />
+        </div>
+        <main className={styles.main}>{children}</main>
+        <div className={styles.bottom}>
+          <FlowerBottomLeft className={styles.flowerBottomLeft} />
+          <FlowerBottomMiddleLeft className={styles.flowerBottomMiddleLeft} />
+          <FlowerBottomMiddle className={styles.flowerBottomMiddle} />
+          <FlowerBottomMiddleRight className={styles.flowerBottomMiddleRight} />
+          <FlowerBottomRight className={styles.flowerBottomRight} />
+        </div>
       </body>
     </html>
   );

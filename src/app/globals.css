@@ -1,63 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-    /** Palette */
-    --light-blue: #789DBC;
-    --light-pink: #FFE3E3;
-    --light-beige: #FEF9F2;
-    --light-green: #C9E9D2;
-    --black: #261803;
+  /** Palette */
+  --white: #ffffff;
+  --black: #1e1e1e;
+  --blue: #83b3c9;
+  --pink: #f14993;
+  --yellow: #f9b038;
 
-    /** Colors */
-    --background: var(--light-beige);
-    --foreground: var(--black);
+  /** Colors */
+  --background: var(--white);
+  --foreground: var(--black);
+
+  @media (prefers-color-scheme: dark) {
+    --background: var(--black);
+    --foreground: var(--white);
+  }
 }
 
-html, body {
-  width: 100%;
+html,
+body {
   height: 100%;
+  width: 100%;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes popin {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.popin {
-    animation: popin 0.2s ease-out;
-}
-
-.reduce {
-    transform: scale(0);
-    transition: transform 0.2s ease-out;
-}
-
-@keyframes move-up {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.move-up {
-    animation: move-up 0.2s ease-out;
-}
-
-.move-down {
-    transform: translateY(100%);;
-    transition: transform 0.2s ease-out;
+main {
+  flex: 1;
 }
