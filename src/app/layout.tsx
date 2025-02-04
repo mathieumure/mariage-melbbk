@@ -19,7 +19,6 @@ import './reset.css';
 import './globals.css';
 import styles from './layout.module.css';
 
-
 const nuevaStd = localFont({
   display: 'swap',
   src: [

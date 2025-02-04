@@ -27,3 +27,7 @@
   max-width: 400px;
   margin-bottom: 5rem;
 }
+
+.actionsBar {
+  height: 60px;
+}

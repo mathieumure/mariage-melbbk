@@ -1,0 +1,19 @@
+.select {
+  padding: 1rem 2rem;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-color: var(--yellow);
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.selectedUser {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: transparent;
+  padding: 0.25rem 1rem;
+  border: solid 2px var(--yellow);
+  border-radius: 5px;
+}
