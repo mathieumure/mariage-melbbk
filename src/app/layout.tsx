@@ -1,8 +1,7 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-import './globals.css';
-import styles from './layout.module.css';
 import {
   FlowerBottomLeft,
   FlowerBottomMiddle,
@@ -15,6 +14,11 @@ import {
   FlowerTopRight,
 } from '@/modules/icons/Flowers';
 import { Heart } from '@/modules/icons/Heart';
+
+import './reset.css';
+import './globals.css';
+import styles from './layout.module.css';
+
 
 const nuevaStd = localFont({
   display: 'swap',
