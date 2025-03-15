@@ -16,6 +16,11 @@ export default async function Home() {
       </h2>
       <div className={styles.actionsBar}>
         <UserSelection initialUser={cookieStore.get('user')?.value ?? null} />
+        <ul>
+          <li>
+            <button aria-label="Défis photos">Coucou</button>
+          </li>
+        </ul>
       </div>
     </div>
   );
