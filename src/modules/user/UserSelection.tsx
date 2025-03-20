@@ -1,28 +1,27 @@
 'use client';
 import { attendees } from '@/data/attendees';
 import styles from './UserSlection.module.css';
-import { ComponentProps, useState } from 'react';
+import React, { ComponentProps } from 'react';
 import { Flipper, Flipped } from 'react-flip-toolkit';
 import { setCookie } from '@/modules/storage/cookies';
+import { useUser } from '@/contexts/user.context';
+import { SelectedUser } from '@/modules/user/SelectedUser';
 
 const sortedAttendees = attendees.sort((a, b) => a.name.localeCompare(b.name));
 
-type Props = { initialUser: string | null };
-export const UserSelection = ({ initialUser }: Props) => {
-  const [selectedUser, setSelectedUser] = useState<string | null>(initialUser);
+export const UserSelection = () => {
+  const { user, setUser } = useUser();
 
   const handleSelection: ComponentProps<'select'>['onChange'] = (e) => {
-    setSelectedUser(e.target.value);
+    setUser(e.target.value);
     setCookie('user', e.target.value);
   };
 
   return (
-    <Flipper flipKey={selectedUser}>
-      {selectedUser ? (
+    <Flipper flipKey={user} className={styles.container}>
+      {user ? (
         <Flipped flipId="selectedUser">
-          <button className={styles.selectedUser} onClick={() => setSelectedUser(null)}>
-            {selectedUser}
-          </button>
+          <SelectedUser onClick={() => setUser(null)}>{user}</SelectedUser>
         </Flipped>
       ) : (
         <Flipped flipId="selectedUser">

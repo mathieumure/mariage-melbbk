@@ -1,0 +1,9 @@
+.selectedUser {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: transparent;
+  padding: 0.25rem 1rem 0;
+  border: solid 2px var(--yellow);
+  border-radius: 5px;
+}

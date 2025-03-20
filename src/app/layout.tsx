@@ -18,6 +18,8 @@ import { Heart } from '@/modules/icons/Heart';
 import './reset.css';
 import './globals.css';
 import styles from './layout.module.css';
+import { UserProvider } from '@/contexts/user.context';
+import { cookies } from 'next/headers';
 
 const nuevaStd = localFont({
   display: 'swap',
@@ -37,11 +39,14 @@ const nuevaStd = localFont({
 
 export const metadata: Metadata = {};
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const storedUser = cookieStore.get('user')?.value ?? null;
+
   return (
     <html lang="fr" className={nuevaStd.className}>
       <body>
@@ -52,7 +57,9 @@ export default function RootLayout({
           <FlowerTopMiddleRight className={styles.flowerTopMiddleRight} />
           <FlowerTopRight className={styles.flowerTopRight} />
         </div>
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          <UserProvider initialUser={storedUser}>{children}</UserProvider>
+        </main>
         <div className={styles.bottom}>
           <FlowerBottomLeft className={styles.flowerBottomLeft} />
           <FlowerBottomMiddleLeft className={styles.flowerBottomMiddleLeft} />
