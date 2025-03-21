@@ -20,6 +20,7 @@ import './globals.css';
 import styles from './layout.module.css';
 import { UserProvider } from '@/contexts/user.context';
 import { cookies } from 'next/headers';
+import { Attendee, attendees } from '@/data/attendees';
 
 const nuevaStd = localFont({
   display: 'swap',
@@ -45,7 +46,11 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const storedUser = cookieStore.get('user')?.value ?? null;
+  const storedUserId = cookieStore.get('user')?.value ?? null;
+  let storedUser: Attendee | null = null;
+  if (storedUserId) {
+    storedUser = attendees.find((it) => it.id === parseInt(storedUserId)) ?? null;
+  }
 
   return (
     <html lang="fr" className={nuevaStd.className}>

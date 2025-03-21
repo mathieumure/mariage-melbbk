@@ -7,6 +7,7 @@ export default function Photo() {
     <article className={styles.container}>
       <SelectedUserOnPage />
       <h1 className={styles.title}>Plan</h1>
+      <p></p>
       <Image src="/plan-du-site.png" alt="Plan des chambres" width={800} height={600} className={styles.image} />
     </article>
   );

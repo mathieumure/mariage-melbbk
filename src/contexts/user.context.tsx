@@ -1,9 +1,10 @@
 'use client';
 import React, { useContext, useMemo } from 'react';
+import { Attendee } from '@/data/attendees';
 
 type UserContext = {
-  user: string | null;
-  setUser: (user: string | null) => void;
+  user: Attendee | null;
+  setUser: (user: Attendee | null) => void;
 };
 
 const UserContext = React.createContext<UserContext>({
@@ -12,7 +13,7 @@ const UserContext = React.createContext<UserContext>({
 });
 
 type Props = {
-  initialUser: string | null;
+  initialUser: Attendee | null;
 };
 export const UserProvider = ({ initialUser, children }: React.PropsWithChildren<Props>) => {
   const [user, setUser] = React.useState(initialUser);

@@ -12,5 +12,5 @@ export const SelectedUserOnPage = () => {
     setUser(null);
     router.push('/');
   };
-  return <SelectedUser onClick={handleClick}>{userRef.current}</SelectedUser>;
+  return <SelectedUser onClick={handleClick}>{userRef.current?.name}</SelectedUser>;
 };
