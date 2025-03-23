@@ -1,30 +1,48 @@
 'use client';
 import React, { useContext, useMemo } from 'react';
 import { Attendee } from '@/data/attendees';
+import { deleteCookie, setCookie } from '@/modules/storage/cookies';
 
-type UserContext = {
-  user: Attendee | null;
-  setUser: (user: Attendee | null) => void;
+export const NO_USER: Attendee = {
+  id: -1,
+  room: 'B0',
+  name: 'Unknown',
 };
 
-const UserContext = React.createContext<UserContext>({
-  user: null,
+const UserContext = React.createContext<Attendee>(NO_USER);
+type UserEditContextType = {
+  setUser: (user: Attendee) => void;
+  removeUser: () => void;
+};
+const UserEditContext = React.createContext<UserEditContextType>({
   setUser: () => {},
+  removeUser: () => {},
 });
 
 type Props = {
-  initialUser: Attendee | null;
+  initialUser?: Attendee;
 };
-export const UserProvider = ({ initialUser, children }: React.PropsWithChildren<Props>) => {
+export const UserProvider = ({ initialUser = NO_USER, children }: React.PropsWithChildren<Props>) => {
   const [user, setUser] = React.useState(initialUser);
-  const context = useMemo(
+  const editUserContext = useMemo<UserEditContextType>(
     () => ({
-      user,
-      setUser,
+      setUser: (user) => {
+        setCookie('user', user.id.toString());
+        setUser(user);
+      },
+      removeUser: () => {
+        setUser(NO_USER);
+        deleteCookie('user');
+      },
     }),
-    [user, setUser],
+    [setUser],
   );
-  return <UserContext.Provider value={context}>{children}</UserContext.Provider>;
+  return (
+    <UserEditContext.Provider value={editUserContext}>
+      <UserContext.Provider value={user}>{children}</UserContext.Provider>
+    </UserEditContext.Provider>
+  );
 };
 
 export const useUser = () => useContext(UserContext);
+export const useUserEdit = () => useContext(UserEditContext);

@@ -5,12 +5,12 @@ import { Camera } from '@/modules/icons/Camera';
 import { Map } from '@/modules/icons/Map';
 import { QuiEstCe } from '@/modules/icons/QuiEstCe';
 import React from 'react';
-import { useUser } from '@/contexts/user.context';
+import { NO_USER, useUser } from '@/contexts/user.context';
 
 export const NavLinks = () => {
-  const { user } = useUser();
+  const user = useUser();
 
-  if (!user) {
+  if (user === NO_USER) {
     return null;
   }
 

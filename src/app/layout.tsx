@@ -47,9 +47,9 @@ export default async function RootLayout({
 }>) {
   const cookieStore = await cookies();
   const storedUserId = cookieStore.get('user')?.value ?? null;
-  let storedUser: Attendee | null = null;
+  let storedUser: Attendee | undefined;
   if (storedUserId) {
-    storedUser = attendees.find((it) => it.id === parseInt(storedUserId)) ?? null;
+    storedUser = attendees.find((it) => it.id === parseInt(storedUserId));
   }
 
   return (
