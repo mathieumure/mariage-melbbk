@@ -7,6 +7,8 @@ import { attendees, Building } from '@/data/attendees';
 import Image from 'next/image';
 import { ComponentProps } from 'react';
 import { BatBSelection } from '@/modules/plan/BatBSelection';
+import { BatCSelection } from '@/modules/plan/BatCSelection';
+import { BatESelection } from '@/modules/plan/BatESelection';
 
 const BUILDING_IMAGE_HEIGHT: Record<Building, number> = {
   B: 1393,
@@ -55,7 +57,9 @@ export default function Photo() {
           Et voici l&apos;emplacement de la chambre <b className={styles.strong}>{user.room}</b> à l&apos;intérieur du batiment <strong>{building}</strong>.
         </p>
         <div className={styles.buildingContainer}>
-          <BatBSelection room={user.room} className={styles.marker} />
+          {building === 'B' && <BatBSelection room={user.room} className={styles.marker} />}
+          {building === 'C' && <BatCSelection room={user.room} className={styles.marker} />}
+          {building === 'E' && <BatESelection room={user.room} className={styles.marker} />}
           <Image {...buildingImageAttributes} />
         </div>
       </section>
