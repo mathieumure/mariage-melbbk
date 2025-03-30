@@ -7,6 +7,7 @@
 .container {
   margin: auto;
   max-width: 800px;
+  padding-top: 32px;
 }
 
 .section,
@@ -14,6 +15,7 @@
   margin: 2rem 0;
   font-size: 1.35rem;
   text-align: center;
+  gap: 1rem;
 }
 
 .intro {
@@ -59,4 +61,8 @@
   width: 200%;
   max-width: unset;
   transform: translateX(-50%);
+}
+
+.text {
+  margin-bottom: 1rem;
 }

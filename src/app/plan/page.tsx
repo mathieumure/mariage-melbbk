@@ -9,6 +9,7 @@ import { ComponentProps } from 'react';
 import { BatBSelection } from '@/modules/plan/BatBSelection';
 import { BatCSelection } from '@/modules/plan/BatCSelection';
 import { BatESelection } from '@/modules/plan/BatESelection';
+import { BackLink } from '@/modules/navigation/components/BackLink';
 
 const BUILDING_IMAGE_HEIGHT: Record<Building, number> = {
   B: 1393,
@@ -36,6 +37,7 @@ export default function Photo() {
 
   return (
     <article className={styles.container}>
+      <BackLink />
       <SelectedUserOnPage />
       <h1 className={styles.title}>Plan</h1>
       <section className={styles.intro}>
@@ -50,7 +52,9 @@ export default function Photo() {
         <p className={styles.text}>
           Ta chambre se trouve dans le bâtiment <b className={styles.strong}>{building}</b>.
         </p>
-        <Map active={building} />
+        <div className={styles.mapView}>
+          <Map active={building} />
+        </div>
       </section>
       <section className={styles.section}>
         <p className={styles.text}>
