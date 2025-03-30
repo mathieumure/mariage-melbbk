@@ -49,3 +49,14 @@
   right: 0;
   bottom: 0;
 }
+
+.mapView {
+  overflow: hidden;
+  max-height: 50%;
+}
+
+.mapView svg {
+  width: 200%;
+  max-width: unset;
+  transform: translateX(-50%);
+}
