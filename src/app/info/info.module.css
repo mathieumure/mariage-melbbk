@@ -1,0 +1,98 @@
+.container {
+  margin: auto;
+  max-width: 800px;
+  padding-top: 64px;
+  font-size: 1.35rem;
+  padding-left: 12px;
+  padding-right: 12px;
+
+  p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+  }
+}
+
+.title {
+  text-align: center;
+  color: var(--blue);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.blue {
+  color: var(--blue);
+}
+.pink {
+  color: var(--pink);
+}
+.yellow {
+  color: var(--yellow);
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.deepLink {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--yellow);
+  line-height: 1.2rem;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+.program {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  dt {
+    color: var(--pink);
+  }
+  dd {
+    color: var(--blue);
+  }
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.link {
+  color: var(--blue);
+}
+
+.flowersSeparator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  svg {
+    height: 50px;
+  }
+}
+.flowersSeparator > svg:nth-child(2n + 1) {
+  transform: rotateY(180deg);
+}

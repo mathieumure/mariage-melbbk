@@ -5,6 +5,8 @@ import { UserSelection } from '@/modules/user/UserSelection';
 import { NavLinks } from '@/modules/navigation/components/NavLinks';
 
 export default async function Home() {
+  const defiPhotoFlag = process.env.FLAG_DEFI_PHOTO === 'true';
+  const quiestCeFlag = process.env.FLAG_QUI_EST_CE === 'true';
   return (
     <div className={styles.container}>
       <Birds className={styles.logo} />
@@ -16,7 +18,7 @@ export default async function Home() {
         <UserSelection />
       </div>
       <div className={styles.bottomBar}>
-        <NavLinks />
+        <NavLinks defiPhotoFlag={defiPhotoFlag} quiestCeFlag={quiestCeFlag} />
       </div>
     </div>
   );
