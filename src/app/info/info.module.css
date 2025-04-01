@@ -5,19 +5,20 @@
   font-size: 1.35rem;
   padding-left: 12px;
   padding-right: 12px;
+}
 
-  p {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  h2 {
-    text-align: center;
-    text-transform: uppercase;
-    margin: 1.5rem 0;
-  }
+.container p {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
 }
 
 .title {
@@ -53,24 +54,26 @@
   text-align: center;
   align-items: center;
   gap: 1rem;
+}
 
-  svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-  }
+.deepLink svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .program {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
-  dt {
-    color: var(--pink);
-  }
-  dd {
-    color: var(--blue);
-  }
+}
+
+.program dt {
+  color: var(--pink);
+}
+
+.program dd {
+  color: var(--blue);
 }
 
 .section {
@@ -88,11 +91,11 @@
   gap: 1rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-
-  svg {
-    height: 50px;
-  }
 }
+.flowersSeparator svg {
+  height: 50px;
+}
+
 .flowersSeparator > svg:nth-child(2n + 1) {
   transform: rotateY(180deg);
 }
