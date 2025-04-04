@@ -24,17 +24,17 @@ export const NavLinks = ({ defiPhotoFlag, quiestCeFlag }: Props) => {
   return (
     <ul className={styles.links}>
       <li>
-        <Link href="/info" className={styles.link}>
-          <Info className={styles.linkIcon} />
-          Information
-        </Link>
-      </li>
-      <li>
         <Link href="/plan" className={styles.link}>
           <Map className={styles.linkIcon} />
           Plan des
           <br />
           chambres
+        </Link>
+      </li>
+      <li>
+        <Link href="/info" className={styles.link}>
+          <Info className={styles.linkIcon} />
+          Information
         </Link>
       </li>
       <li>
