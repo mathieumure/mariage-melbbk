@@ -33,6 +33,32 @@ class SynologyApi {
     this.photoDir = photoDir;
   }
 
+  async login(username: string, password: string): Promise<string> {
+    const params = new URLSearchParams({
+      api: 'SYNO.API.Auth',
+      version: '3',
+      method: 'login',
+      account: username,
+      passwd: password,
+      session: 'FileStation',
+      format: 'sid',
+    });
+
+    const loginResult = await fetch(`${this.baseUrl}/auth.cgi?${params}`);
+
+    if (!loginResult.ok) {
+      const reason = await loginResult.text();
+      throw new Error('Login failed:' + reason);
+    }
+
+    const loginData: SynologyResponse<{ sid: string }> = await loginResult.json();
+    if (!loginData.success) {
+      throw new Error('Login failed:' + loginData.error);
+    }
+
+    return loginData.data.sid;
+  }
+
   async cookieLogin(username: string, password: string): Promise<string> {
     const params = new URLSearchParams({
       api: 'SYNO.API.Auth',
@@ -77,35 +103,30 @@ class SynologyApi {
   //   }).then((it) => it.json());
   // }
 
-  async getPhotoList(cookies?: string): Promise<SynologyResponse<SynologyListResponse>> {
+  async getPhotoList(sid: string): Promise<SynologyResponse<SynologyListResponse>> {
     const params = new URLSearchParams({
       api: 'SYNO.FileStation.List',
       version: '2',
       method: 'list',
       folder_path: this.photoDir,
+      pattern: '*.png,*.jpg,*jpeg',
+      _sid: sid,
     });
 
-    return fetch(`${this.baseUrl}/entry.cgi?${params}`, {
-      headers: {
-        Cookie: cookies || '',
-      },
-    }).then((it) => it.json());
+    return fetch(`${this.baseUrl}/entry.cgi?${params}`).then((it) => it.json());
   }
 
-  async getPhoto(path: string, size: ImageSize = 'small', cookies?: string): Promise<Blob> {
+  async getPhoto(path: string, size: ImageSize = 'small', sid: string): Promise<Response> {
     const params = new URLSearchParams({
       api: 'SYNO.FileStation.Thumb',
       version: '2',
       method: 'get',
       path: this.photoDir + '/' + path,
       size,
+      _sid: sid,
     });
 
-    return fetch(`${this.baseUrl}/entry.cgi?${params}`, {
-      headers: {
-        Cookie: cookies || '',
-      },
-    }).then((it) => it.blob());
+    return fetch(`${this.baseUrl}/entry.cgi?${params}`);
   }
 }
 

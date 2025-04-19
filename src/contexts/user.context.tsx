@@ -7,6 +7,7 @@ export const NO_USER: Attendee = {
   id: -1,
   room: 'B0',
   name: 'Unknown',
+  defi_photo: 'Unknown',
 };
 
 const UserContext = React.createContext<Attendee>(NO_USER);

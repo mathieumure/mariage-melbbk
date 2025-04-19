@@ -1,26 +1,18 @@
 import { ImageSize, synologyClient } from '@/modules/synology/synology.api';
 import { NextRequest } from 'next/server';
+import { cookies } from 'next/headers';
 
-async function ensureLogin(request: NextRequest): Promise<string> {
-  const authCookie = request.cookies.get('did');
-  if (!authCookie) {
-    return synologyClient.cookieLogin(process.env.SYNOLOGY_USERNAME, process.env.SYNOLOGY_PASSWORD);
-  }
-  return request.headers.get('Cookie') as string;
-}
+// export const dynamic = 'force-static';
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
+  const cookieStore = await cookies();
+  const sid = cookieStore.get('sid');
+  if (!sid) {
+    return Response.json('Missing authorization', { status: 401 });
+  }
+
   const size = (request.nextUrl.searchParams.get('size') as ImageSize) || 'original';
-  const cookieLogin = await ensureLogin(request);
 
-  const photoList = await synologyClient.getPhoto(name, size, cookieLogin);
-
-  const response = new Response(photoList, {
-    headers: {
-      'Content-Type': 'image/jpeg',
-    },
-  });
-
-  return response;
+  return synologyClient.getPhoto(name, size, sid.value);
 }

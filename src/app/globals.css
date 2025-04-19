@@ -33,3 +33,7 @@ main {
   flex: 1;
   position: relative;
 }
+
+.pswp img {
+  object-fit: contain;
+}

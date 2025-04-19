@@ -1,104 +1,110 @@
-id;name;room
-1;Mel;B1
-2;Arnaud;B1
-3;Martine;B1
-4;Thierry;B1
-5;Emmelyne;
-6;Geo;
-7;Nath;
-8;Maryse;
-9;Gilles;
-10;Antoine;
-11;Sanjay;
-12;Jere;
-13;Orlane;
-14;Coco;
-15;Yolene;
-16;Dylan;
-17;Eric;
-18;Celine;
-19;Manon;
-20;Lucy;
-21;Chloé;
-22;L'éric;
-23;Patou;
-24;Gilles;
-25;Eliane;
-26;Marine;
-27;Nico;
-28;Loïc;
-29;Juliette;
-30;Corinne;
-31;Patrick;
-32;Ornella;
-33;Eric;
-34;Menie;
-35;Alexandra;
-36;Bruno;
-37;Tristan;
-38;Louane;
-39;Ines;
-40;Bernard;
-41;Julie;
-42;Fred;
-43;Tatie Chanto;
-44;Jezabel;
-45;Lionel;
-46;Fabien;
-47;Audrey;
-48;Jean baptist;
-49;Tamtam;
-50;Flo;
-51;Jujuberlu;
-52;Marie Berl;
-53;NT;
-54;Laura;
-55;Ahcene;
-56;Celia;
-57;Dada Gille;
-58;Mide ;
-59;Chach ;
-60;Colin;
-61;Elise;
-62;Martial;
-63;Jero;
-64;Aur�lien;
-65;Lulu;
-66;Romain;
-67;Fafa;
-68;R�mi;
-69;Andréa;
-70;Seb;
-71;Zam;
-72;Mout;
-73;Jean;
-74;Mike;
-75;Lauriane;
-76;Taye;
-77;copine Tay;
-78;Gweltou;
-79;Charline;
-80;Syssou;
-81;Julie ;
-82;Momotte ;
-83;Alice;
-84;Yves;
-85;Bichou;
-86;Christian;
-87;Bastou;
-88;Magalie;
-89;Farel;
-90;Charlotte;
-91;Fanny;
-92;Nanou;
-93;Vincent;
-94;Ben;
-95;Maellie;
-96;Dudu;
-97;Clothilde;
-98;Yang;
-99;Francis;
-100;Charly;
-101;Guillaume;
-102;Caro;
-103;Quent;
+﻿id;name;room;defi_photo
+1;Ahcene;B5;Joberlu
+2;Alexandra;;Nanou
+3;Alice;C7;Alice
+4;Andréa;B4;Andréa
+5;Antoine;B6;Antoine
+6;Arnaud;B2;
+7;Audrey;B6;Gilles (Tonton)
+8;Aurélien;C3;Patou
+9;Bastoo;C6;Taye
+10;Ben;C6;Antoine
+11;Bernard;;Mike
+12;Bruno;;Nanou
+13;Cecile;C4;Taye
+14;Celia;B5;Joberlu
+15;Chach;C8;Momotte
+16;Charlène;C7;Patou
+17;Charline;;Gweltou
+18;Charlotte;C5;Antoine
+19;Clothilde;C6;Andréa
+20;Coco;B8;Mike
+21;Colin;C8;Momotte
+22;Dudu;C6;Andréa
+23;Dylan;B8;Julie
+24;Eliane;C2;Gilles (Tonton)
+25;Elise;C3;Gweltou
+26;Emmelyne;B2;Alice
+27;Eric (cousin);C1;Taye
+28;Eric (tonton);C2;Momotte
+29;Fafa;B4;Andréa
+30;Fanny;C5;Gilles (Tonton)
+31;Farel;C5;Antoine
+32;Flo;C1;Jezabel
+33;Francis;C7;Yang
+34;Fred;B1;Julie
+35;Geo;C1;Lulu
+36;Gilles (Dada);B5;
+37;Gilles (Papi);B6;Jezabel
+38;Gilles (Tonton);;Gilles (Tonton)
+39;Guillaume;C7;Patou
+40;Gweltou;;Gweltou
+41;Ines;;Nanou
+42;Jean;C8;Nanou
+43;Jean baptiste;B6;Gilles (Tonton)
+44;Jere;B8;Alice
+45;Jero;C3;Patou
+46;Jezabel;B1;Jezabel
+47;Joberlu;B3;Joberlu
+48;Julie;;Lulu
+49;Julie (cousine);B1;Julie
+50;Juliette;B7;Joberlu
+51;L'éric;;Patou
+52;Laura;B3;Yang
+53;Lauriane;C4;Mike
+54;Lionel;B1;Jezabel
+55;Loïc;B7;Joberlu
+56;Louane;;Mike
+57;Louis;B8;
+58;Lulu;C3;Lulu
+59;Magalie;C6;Taye
+60;Mariberlu;B3;Joberlu
+61;Marine;;Momotte
+62;Martial;C3;Gweltou
+63;Martine (Maman);C2;Julie
+64;Maryse;B6;Jezabel
+65;Mel;B2;
+66;Menie;C2;Momotte
+67;Mide;C8;
+68;Mike;C4;Mike
+69;Momotte (Simon);C4;Momotte
+70;Mout;C8;Nanou
+71;Nanou;C5;Nanou
+72;Nath';C1;Lulu
+73;Nico;B7;Momotte
+74;NT;B3;Yang
+75;Orlane;B8;Mike
+76;Patou;;Patou
+77;Philippe;B6;Antoine
+78;Rémi;B4;Antoine
+79;Romain;C3;Lulu
+80;Seb;B4;Andréa
+81;Syssou;;Lulu
+82;Tamtam;C1;Jezabel
+83;Tatie Chantou;B1;Gilles (Tonton)
+84;Taye;C4;
+85;Thierry;C2;Julie
+86;Tristan;;Mike
+87;Vincent;C5;Nanou
+88;Yang;C7;Yang
+89;Yolene;B8;Julie
+90;Yves;C7;Alice
+91;Ella;B2;
+92;Maëllie;B7;
+93;Marine;B7;
+94;Loundra;B1;
+95;Charliberlu;B3;
+96;Ellie;B4;
+97;Zam;B4;Gweltou
+98;Emrys;B5;
+99;Irnes;B5;
+100;Maelle;B5;
+101;Marie G;C8;Taye
+102;Carine;;Taye
+103;Ludo;;Taye
+104;Marie;;Antoine
+105;Cyril;;Alice
+106;Françoise;;Alice
+107;Lionnel;;Alice
+108;Jacky;;Yang
+109;Martine (Voisine);;Yang

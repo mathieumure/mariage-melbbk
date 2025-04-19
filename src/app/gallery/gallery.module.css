@@ -29,13 +29,12 @@
 .gallery img {
   object-fit: cover;
   aspect-ratio: 3 / 4;
+  width: 100%;
 }
 
-.gallery button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+.gallery a {
+  width: 100%;
+  height: 100%;
 }
 
 .fullDisplay {

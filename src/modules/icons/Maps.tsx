@@ -1,5 +1,5 @@
 type Props = {
-  active: 'B' | 'C' | 'E';
+  active?: 'B' | 'C' | 'E';
 };
 export const Map = ({ active }: Props) => {
   return (
