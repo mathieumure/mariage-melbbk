@@ -41,7 +41,7 @@ export function DefiPhoto({ photos }: Props) {
       <p>
         Ton chef d&apos;équipe est <b className={styles.strong}>{user.defi_photo}</b>
       </p>
-      <p>Vous êtes mis au défi d&apos;aller vous prendre en photos:</p>
+      <p>Vous êtes mis au défi de prendre une photo...</p>
       <ul className={styles.list}>
         {challenges.map((challenge, index) => {
           const filename = `Defi_${user.defi_photo}_${challenge}`;
