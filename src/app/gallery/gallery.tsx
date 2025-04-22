@@ -15,8 +15,6 @@ export const GalleryLightbox = (props: Props) => {
     });
     lightbox.init();
 
-    console.log(lightbox);
-
     return () => {
       lightbox.destroy();
     };

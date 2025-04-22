@@ -2,8 +2,6 @@ import { ImageSize, synologyClient } from '@/modules/synology/synology.api';
 import { NextRequest } from 'next/server';
 import { cookies } from 'next/headers';
 
-// export const dynamic = 'force-static';
-
 export async function GET(request: NextRequest, { params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
   const cookieStore = await cookies();

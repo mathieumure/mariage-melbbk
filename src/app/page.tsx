@@ -3,6 +3,7 @@ import styles from './home.module.css';
 import { Birds } from '@/modules/icons/Birds';
 import { UserSelection } from '@/modules/user/UserSelection';
 import { NavLinks } from '@/modules/navigation/components/NavLinks';
+import { OptionalLinks } from '@/modules/navigation/components/OptionalLinks';
 
 export default async function Home() {
   const defiPhotoFlag = process.env.FLAG_DEFI_PHOTO === 'true';
@@ -18,7 +19,10 @@ export default async function Home() {
         <UserSelection />
       </div>
       <div className={styles.bottomBar}>
-        <NavLinks defiPhotoFlag={defiPhotoFlag} quiestCeFlag={quiestCeFlag} />
+        <NavLinks />
+      </div>
+      <div className={styles.optionalBar}>
+        <OptionalLinks defiPhotoFlag={defiPhotoFlag} quiestCeFlag={quiestCeFlag} />
       </div>
     </div>
   );

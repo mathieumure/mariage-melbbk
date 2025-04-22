@@ -17,7 +17,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 2,
     name: 'Alexandra',
-
     defi_photo: 'Nanou',
   },
   {
@@ -71,13 +70,11 @@ export const attendees: Array<Attendee> = [
   {
     id: 11,
     name: 'Bernard',
-
     defi_photo: 'Mike',
   },
   {
     id: 12,
     name: 'Bruno',
-
     defi_photo: 'Nanou',
   },
   {
@@ -107,7 +104,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 17,
     name: 'Charline',
-
     defi_photo: 'Gweltou',
   },
   {
@@ -222,7 +218,7 @@ export const attendees: Array<Attendee> = [
     id: 36,
     name: 'Gilles (Dada)',
     room: 'B5',
-    defi_photo: '',
+    defi_photo: 'Gweltou',
   },
   {
     id: 37,
@@ -233,7 +229,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 38,
     name: 'Gilles (Tonton)',
-
     defi_photo: 'Gilles (Tonton)',
   },
   {
@@ -245,13 +240,11 @@ export const attendees: Array<Attendee> = [
   {
     id: 40,
     name: 'Gweltou',
-
     defi_photo: 'Gweltou',
   },
   {
     id: 41,
     name: 'Ines',
-
     defi_photo: 'Nanou',
   },
   {
@@ -293,7 +286,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 48,
     name: 'Julie',
-
     defi_photo: 'Lulu',
   },
   {
@@ -311,7 +303,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 51,
     name: "L'éric",
-
     defi_photo: 'Patou',
   },
   {
@@ -341,7 +332,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 56,
     name: 'Louane',
-
     defi_photo: 'Mike',
   },
   {
@@ -371,7 +361,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 61,
     name: 'Marine',
-
     defi_photo: 'Momotte',
   },
   {
@@ -408,7 +397,7 @@ export const attendees: Array<Attendee> = [
     id: 67,
     name: 'Mide',
     room: 'C8',
-    defi_photo: '',
+    defi_photo: 'Yang',
   },
   {
     id: 68,
@@ -461,7 +450,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 76,
     name: 'Patou',
-
     defi_photo: 'Patou',
   },
   {
@@ -474,7 +462,7 @@ export const attendees: Array<Attendee> = [
     id: 78,
     name: 'Rémi',
     room: 'B4',
-    defi_photo: 'Antoine',
+    defi_photo: 'Andréa',
   },
   {
     id: 79,
@@ -491,7 +479,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 81,
     name: 'Syssou',
-
     defi_photo: 'Lulu',
   },
   {
@@ -510,7 +497,7 @@ export const attendees: Array<Attendee> = [
     id: 84,
     name: 'Taye',
     room: 'C4',
-    defi_photo: '',
+    defi_photo: 'Taye',
   },
   {
     id: 85,
@@ -521,7 +508,6 @@ export const attendees: Array<Attendee> = [
   {
     id: 86,
     name: 'Tristan',
-
     defi_photo: 'Mike',
   },
   {
@@ -617,49 +603,46 @@ export const attendees: Array<Attendee> = [
   {
     id: 102,
     name: 'Carine',
-
     defi_photo: 'Taye',
   },
   {
     id: 103,
     name: 'Ludo',
-
     defi_photo: 'Taye',
   },
   {
     id: 104,
     name: 'Marie',
-
     defi_photo: 'Antoine',
   },
   {
     id: 105,
     name: 'Cyril',
-
     defi_photo: 'Alice',
   },
   {
     id: 106,
     name: 'Françoise',
-
     defi_photo: 'Alice',
   },
   {
     id: 107,
     name: 'Lionnel',
-
     defi_photo: 'Alice',
   },
   {
     id: 108,
     name: 'Jacky',
-
     defi_photo: 'Yang',
   },
   {
     id: 109,
     name: 'Martine (Voisine)',
-
     defi_photo: 'Yang',
+  },
+  {
+    id: 110,
+    name: 'Rémi (SARL Lemor)',
+    defi_photo: 'Antoine',
   },
 ];

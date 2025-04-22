@@ -33,3 +33,13 @@
   width: 30px;
   height: 30px;
 }
+
+.optionalLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  animation: fadeIn 1.2s;
+}

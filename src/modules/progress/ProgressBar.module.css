@@ -1,0 +1,29 @@
+.progressBar {
+  background-color: #dfe6e9;
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.progressBar:before {
+  content: '';
+  transition: all 300ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 6px;
+  background-color: var(--green);
+  right: calc(100% - var(--progress-percent));
+}
+
+.progressBar:after {
+  counter-reset: progress-amount var(--progress-amount);
+  content: counter(progress-amount) '%';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

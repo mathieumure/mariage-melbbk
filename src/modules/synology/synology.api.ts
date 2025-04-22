@@ -59,57 +59,32 @@ class SynologyApi {
     return loginData.data.sid;
   }
 
-  async cookieLogin(username: string, password: string): Promise<string> {
+  async uploadFile(sid: string, file: File): Promise<Response> {
+    const formData = new FormData();
+    formData.append('path', this.photoDir);
+    formData.append('filename', file);
+
     const params = new URLSearchParams({
-      api: 'SYNO.API.Auth',
+      api: 'SYNO.FileStation.Upload',
       version: '3',
-      method: 'login',
-      account: username,
-      passwd: password,
-      session: 'FileStation',
+      method: 'upload',
+      overwrite: 'true',
+      _sid: sid,
     });
 
-    const loginResult = await fetch(`${this.baseUrl}/auth.cgi?${params}`);
-
-    if (!loginResult.ok) {
-      const reason = await loginResult.text();
-      throw new Error('Login failed:' + reason);
-    }
-
-    const loginData: SynologyResponse<{ did: string; sid: string }> = await loginResult.json();
-    if (!loginData.success) {
-      throw new Error('Login failed:' + loginData.error);
-    }
-
-    return loginResult.headers.get('set-cookie') as string;
+    return fetch(`${this.baseUrl}/entry.cgi?${params}`, {
+      method: 'POST',
+      body: formData,
+    });
   }
 
-  // async uploadFile(file: File): Promise<SynologyResponse<unknown>> {
-  //   const formData = new FormData();
-  //   formData.append('path', `/photo/Mathieu/mariage`);
-  //   formData.append('filename', file, `${Date.now()}_${file.name}`);
-  //
-  //   const params = new URLSearchParams({
-  //     api: 'SYNO.FileStation.Upload',
-  //     version: '3',
-  //     method: 'upload',
-  //     overwrite: 'true',
-  //   });
-  //
-  //   console.log('uploading to ', `${this.baseUrl}/entry.cgi?${params}`, file.name);
-  //   return fetch(`${this.baseUrl}/entry.cgi?${params}`, {
-  //     method: 'POST',
-  //     body: formData,
-  //   }).then((it) => it.json());
-  // }
-
-  async getPhotoList(sid: string): Promise<SynologyResponse<SynologyListResponse>> {
+  async getPhotoList(sid: string, patterns: Array<string> = ['*.png', '*.jpg', '*.jpeg']): Promise<SynologyResponse<SynologyListResponse>> {
     const params = new URLSearchParams({
       api: 'SYNO.FileStation.List',
       version: '2',
       method: 'list',
       folder_path: this.photoDir,
-      pattern: '*.png,*.jpg,*jpeg',
+      pattern: patterns.join(','),
       _sid: sid,
     });
 

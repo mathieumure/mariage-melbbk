@@ -40,3 +40,11 @@
   align-items: flex-end;
   padding-bottom: 30px;
 }
+
+.optionalBar {
+  position: absolute;
+  bottom: -27px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

@@ -34,7 +34,7 @@
 33;Francis;C7;Yang
 34;Fred;B1;Julie
 35;Geo;C1;Lulu
-36;Gilles (Dada);B5;
+36;Gilles (Dada);B5;Gweltou
 37;Gilles (Papi);B6;Jezabel
 38;Gilles (Tonton);;Gilles (Tonton)
 39;Guillaume;C7;Patou
@@ -65,7 +65,7 @@
 64;Maryse;B6;Jezabel
 65;Mel;B2;
 66;Menie;C2;Momotte
-67;Mide;C8;
+67;Mide;C8;Yang
 68;Mike;C4;Mike
 69;Momotte (Simon);C4;Momotte
 70;Mout;C8;Nanou
@@ -76,13 +76,13 @@
 75;Orlane;B8;Mike
 76;Patou;;Patou
 77;Philippe;B6;Antoine
-78;Rémi;B4;Antoine
+78;Rémi;B4;Andréa
 79;Romain;C3;Lulu
 80;Seb;B4;Andréa
 81;Syssou;;Lulu
 82;Tamtam;C1;Jezabel
 83;Tatie Chantou;B1;Gilles (Tonton)
-84;Taye;C4;
+84;Taye;C4;Taye
 85;Thierry;C2;Julie
 86;Tristan;;Mike
 87;Vincent;C5;Nanou
@@ -108,3 +108,4 @@
 107;Lionnel;;Alice
 108;Jacky;;Yang
 109;Martine (Voisine);;Yang
+110;Rémi (SARL Lemor);;Antoine

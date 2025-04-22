@@ -49,7 +49,7 @@ export default function Photo() {
       <dl className={styles.program}>
         <dt>16h30</dt>
         <dd>Cérémonie laïque</dd>
-        <dt>16h30</dt>
+        <dt>18h00</dt>
         <dd>Cocktail</dd>
         <dt>20h00</dt>
         <dd>Diner et soirée</dd>
