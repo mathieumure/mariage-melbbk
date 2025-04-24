@@ -1,0 +1,17 @@
+export const challengesByTeam: Record<string, string> = {
+  Momotte: 'avec 4 membres de la famille de la mariée',
+  Julie: 'en faisant des bisous aux mariés',
+  Nanou: 'dans les toilettes',
+  'Gilles (Tonton)': 'dans le plus petit véhicule',
+  Joberlu: 'avec les STB',
+  Mike: 'sans toucher le sol',
+  Antoine: 'avec les quatres témoins',
+  Gweltou: 'avec 4 membres de la famille du marié',
+  Andréa: 'dans la nature',
+  Taye: 'avec tous les quebecois (ils sont 3 au total)',
+  Alice: 'avec un(e) ponot et un(e) breton(ne)',
+  Yang: "avec quelqu'un de pas invité",
+  Jezabel: 'dans un dortoir',
+  Patou: "avec un animal (si aucun n'est disponible se rabattre sur le frère du marié ou de la mariée )",
+  Lulu: 'avec Ella et ses grands parents',
+};

@@ -61,21 +61,17 @@
   position: relative;
 }
 
-.challengeCompleted {
-  position: absolute;
-  right: 0;
-  top: 6px;
-}
-
 .fileUpload {
   display: flex;
   width: 100%;
   aspect-ratio: 16 / 9;
   justify-content: center;
   align-items: center;
-  border: white 1px dashed;
-  color: white;
+  border: var(--yellow) 3px dashed;
+  color: var(--yellow);
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .fileUpload input {
