@@ -18,6 +18,17 @@ export default async function Gallery() {
   const photos = await synologyClient.getPhotoList(sid?.value);
   const photosPath = photos.data.files.map((file) => `/api/photo/${file.name}`);
 
+  if (photosPath.length === 0) {
+    return (
+      <article className={styles.container}>
+        <BackLink />
+        <SelectedUserOnPage />
+        <h1 className={styles.title}>Galerie photo</h1>
+        <p className={styles.noPhoto}>Aucune photo disponible</p>
+      </article>
+    );
+  }
+
   return (
     <article className={styles.container}>
       <BackLink />

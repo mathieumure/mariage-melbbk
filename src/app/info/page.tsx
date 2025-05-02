@@ -12,7 +12,6 @@ export default function Photo() {
       <BackLink />
       <SelectedUserOnPage />
       <h1 className={styles.title}>Information</h1>
-      <p className={styles.blue}>Mélanie et Arnaud sont heureux de vous convier à leur mariage qui sera célébré le</p>
       <h2 className={styles.pink}>Samedi 24 mai 2025</h2>
       <p className={styles.yellow}>au Junior Club House</p>
       <p className={styles.yellow}>La Croix // 19160 Junior Club House</p>
@@ -66,14 +65,26 @@ export default function Photo() {
         <FlowerLine />
       </div>
 
-      <p className={styles.blue}>
-        Des chambres dortoires ont été réservées pour vous accueillir dans une ambiance conviviale. Vous pouvez retrouver votre chambre en{' '}
+      <p className={styles.blue} style={{ marginTop: '3rem' }}>
+        Retrouvez votre dortoir en{' '}
         <Link href="/plan" className={styles.link}>
-          suivant ce lien
+          suivant ce lien.
         </Link>
       </p>
-      <p className={styles.yellow}>Toutefois si vous préférez un cadre plus privé, vous avez la possibilié de réserver un lodge au Village Nature Le Maury</p>
-      <p className={styles.pink}>Il est possible d&apos;arriver le vendredi après-midi si vous le souhaitez avec une participation de 20 euros.</p>
+      <p className={styles.yellow}>Les draps sont fournis, penser aux serviettes de toilette.</p>
+      <p className={styles.pink}>Le parking se trouve à l&apos;entrée, à droite après le portail blanc. Ne pas descendre plus bas en voiture.</p>
+      <p className={styles.yellow}>Prévoir de quoi se couvrir le soir, les soirées corréziennes peuvent être fraiches.</p>
+      <p className={styles.pink}>Une partie de la journée se déroulera en extérieur, dans l&apos;herbe. Les talons aiguilles sont déconseillés.</p>
+      <p className={styles.yellow}>La participation pour ceux qui souhaitent arriver le vendredi peut être viré sur le compte: </p>
+      <dl className={styles.program}>
+        <dt>Titulaire</dt>
+        <dd>Braconnier Arnaud ou Lemor Mélanie</dd>
+        <dt>IBAN</dt>
+        <dd>FR76 1780 6003 8704 1602 6231 795</dd>
+        <dt>BIC</dt>
+        <dd>AGRIFRPP878</dd>
+      </dl>
+      <p className={styles.yellow}>Nous sommes heureux de vous compter parmi nous &lt;3</p>
     </article>
   );
 }

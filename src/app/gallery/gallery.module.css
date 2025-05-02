@@ -82,3 +82,12 @@
 .fullDisplayImage {
   max-height: 100vh;
 }
+
+.noPhoto {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-top: 15rem;
+  margin-bottom: 1rem;
+  color: var(--yellow);
+}

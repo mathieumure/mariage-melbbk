@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { synologyClient } from '@/modules/synology/synology.api';
 
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace NodeJS {
+    interface ProcessEnv {
+      SYNOLOGY_USERNAME: string;
+      SYNOLOGY_PASSWORD: string;
+    }
+  }
+}
+
 export async function middleware(request: NextRequest) {
   const response = NextResponse.next();
 

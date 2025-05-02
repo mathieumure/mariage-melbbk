@@ -331,7 +331,7 @@ export const attendees: Array<Attendee> = [
   },
   {
     id: 56,
-    name: 'Louane',
+    name: 'Lou Anne',
     defi_photo: 'Mike',
   },
   {
@@ -617,7 +617,7 @@ export const attendees: Array<Attendee> = [
   },
   {
     id: 105,
-    name: 'Cyril',
+    name: 'Cyrille',
     defi_photo: 'Alice',
   },
   {

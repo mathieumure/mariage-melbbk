@@ -33,7 +33,7 @@ export const NavLinks = () => {
       <li>
         <Link href="/gallery" className={styles.link}>
           <Gallery className={styles.linkIcon} />
-          Gallerie photos
+          Galerie photos
         </Link>
       </li>
     </ul>
