@@ -75,7 +75,9 @@ export default function Photo() {
       <p className={styles.pink}>Le parking se trouve à l&apos;entrée, à droite après le portail blanc. Ne pas descendre plus bas en voiture.</p>
       <p className={styles.yellow}>Prévoir de quoi se couvrir le soir, les soirées corréziennes peuvent être fraiches.</p>
       <p className={styles.pink}>Une partie de la journée se déroulera en extérieur, dans l&apos;herbe. Les talons aiguilles sont déconseillés.</p>
-      <p className={styles.yellow}>La participation pour ceux qui souhaitent arriver le vendredi peut être viré sur le compte: </p>
+      <p className={styles.yellow}>
+        La participation pour ceux qui souhaitent arriver le vendredi est de <span className={styles.pink}>20€</span>, et peut être viré sur le compte:{' '}
+      </p>
       <dl className={styles.program}>
         <dt>Titulaire</dt>
         <dd>Braconnier Arnaud ou Lemor Mélanie</dd>
