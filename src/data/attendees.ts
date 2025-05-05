@@ -217,7 +217,7 @@ export const attendees: Array<Attendee> = [
   {
     id: 36,
     name: 'Gilles (Dada)',
-    room: 'B5',
+    room: 'C4',
     defi_photo: 'Gweltou',
   },
   {

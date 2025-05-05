@@ -1,0 +1,23 @@
+.container {
+  margin: auto;
+  max-width: 800px;
+  padding-top: 64px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.table tr:nth-child(odd) {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.container p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
