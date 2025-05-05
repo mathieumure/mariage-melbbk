@@ -9,7 +9,7 @@ export const challengesByTeam: Record<string, string> = {
   Gweltou: 'avec 4 membres de la famille du marié',
   Andréa: 'dans la nature',
   Taye: 'avec tous les quebecois (ils sont 3 au total)',
-  Alice: 'avec un(e) ponot et un(e) breton(ne)',
+  Alice: 'avec un(e) kabyle et un(e) breton(ne)',
   Yang: "avec quelqu'un de pas invité",
   Jezabel: 'dans un dortoir',
   Patou: "avec un animal (si aucun n'est disponible se rabattre sur le frère du marié ou de la mariée )",
