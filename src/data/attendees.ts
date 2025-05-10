@@ -193,7 +193,7 @@ export const attendees: Array<Attendee> = [
   {
     id: 32,
     name: 'Flo',
-    room: 'C1',
+    room: 'B3',
     defi_photo: 'Jezabel',
   },
   {
@@ -349,16 +349,16 @@ export const attendees: Array<Attendee> = [
   },
   {
     id: 59,
-    name: 'Magalie',
+    name: 'Magali',
     room: 'C6',
     defi_photo: 'Taye',
   },
-  {
-    id: 60,
-    name: 'Mariberlu',
-    room: 'B3',
-    defi_photo: 'Joberlu',
-  },
+  // {
+  //   id: 60,
+  //   name: 'Mariberlu',
+  //   room: 'B3',
+  //   defi_photo: 'Joberlu',
+  // },
   {
     id: 61,
     name: 'Marine',
@@ -486,7 +486,7 @@ export const attendees: Array<Attendee> = [
   {
     id: 82,
     name: 'Tamtam',
-    room: 'C1',
+    room: 'B3',
     defi_photo: 'Jezabel',
   },
   {
@@ -554,12 +554,12 @@ export const attendees: Array<Attendee> = [
     room: 'B1',
     defi_photo: '',
   },
-  {
-    id: 95,
-    name: 'Charliberlu',
-    room: 'B3',
-    defi_photo: '',
-  },
+  // {
+  //   id: 95,
+  //   name: 'Charliberlu',
+  //   room: 'B3',
+  //   defi_photo: '',
+  // },
   {
     id: 96,
     name: 'Ellie',
@@ -640,5 +640,11 @@ export const attendees: Array<Attendee> = [
     id: 110,
     name: 'Rémi (SARL Lemor)',
     defi_photo: 'Antoine',
+  },
+  {
+    id: 111,
+    name: 'Manon',
+    defi_photo: 'Momotte',
+    room: 'C6'
   },
 ];
