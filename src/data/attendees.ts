@@ -362,7 +362,7 @@ export const attendees: Array<Attendee> = [
   {
     id: 61,
     name: 'Marine',
-    room: "B7",
+    room: 'B7',
     defi_photo: 'Momotte',
   },
   {
@@ -644,7 +644,7 @@ export const attendees: Array<Attendee> = [
   {
     id: 111,
     name: 'Manon',
-    defi_photo: 'Momotte',
-    room: 'C6'
+    defi_photo: 'Taye',
+    room: 'C1',
   },
 ];
