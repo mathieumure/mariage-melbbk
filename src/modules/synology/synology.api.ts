@@ -61,14 +61,14 @@ class SynologyApi {
 
   async uploadFile(sid: string, file: File): Promise<Response> {
     const formData = new FormData();
+    formData.append('overwrite', 'true');
     formData.append('path', this.photoDir);
-    formData.append('filename', file);
+    formData.append('file', new File([file], file.name));
 
     const params = new URLSearchParams({
       api: 'SYNO.FileStation.Upload',
-      version: '3',
       method: 'upload',
-      overwrite: 'true',
+      version: '2',
       _sid: sid,
     });
 

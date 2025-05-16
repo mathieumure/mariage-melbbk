@@ -6,6 +6,7 @@ import { SelectedUserOnPage } from '@/modules/user/SelectedUserOnPage';
 
 import styles from './gallery.module.css';
 import { GalleryLightbox } from '@/app/gallery/gallery';
+import Link from 'next/link';
 
 export default async function Gallery() {
   const cookiesStore = await cookies();
@@ -25,6 +26,9 @@ export default async function Gallery() {
         <SelectedUserOnPage />
         <h1 className={styles.title}>Galerie photo</h1>
         <p className={styles.noPhoto}>Aucune photo disponible</p>
+        <Link className={styles.addButton} href="/upload">
+          + Ajouter vos photos
+        </Link>
       </article>
     );
   }
@@ -44,6 +48,9 @@ export default async function Gallery() {
           </li>
         ))}
       </ul>
+      <Link className={styles.addButton} href="/upload">
+        + Ajouter vos photos
+      </Link>
     </article>
   );
 }
