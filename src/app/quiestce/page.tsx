@@ -27,7 +27,7 @@ export default function Photo() {
           <option value={-1} disabled style={{ fontStyle: 'italic' }}>
             Numéro du carton
           </option>
-          {Array.from({ length: 10 }).map((_, index) => (
+          {Array.from({ length: 16 }).map((_, index) => (
             <option key={index} value={index + 1}>
               Carton {index + 1}
             </option>
@@ -39,9 +39,9 @@ export default function Photo() {
               {responseDisplayed ? 'Masquer les réponses' : 'Afficher les réponses'}
             </button>
             {responseDisplayed ? (
-              <img className={styles.image} src={`/quiestce/card_${selectedCard}_response.png`} alt={`Réponse du carton ${selectedCard}`} />
+              <img className={styles.image} src={`/quiestce/card_${selectedCard}.jpg`} alt={`Réponse du carton ${selectedCard}`} />
             ) : (
-              <img className={styles.image} src={`/quiestce/card_${selectedCard}.png`} alt={`Carton ${selectedCard}`} />
+              <img className={styles.image} src={`/quiestce/card_${selectedCard}_empty.jpg`} alt={`Carton ${selectedCard}`} />
             )}
           </div>
         )}
